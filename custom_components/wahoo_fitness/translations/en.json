@@ -1,0 +1,66 @@
+{
+  "title": "Wahoo Fitness",
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Connect Wahoo equipment",
+        "description": "Enter the local address of your Wi-Fi connected Wahoo bike or treadmill.",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        }
+      },
+      "reconfigure": {
+        "title": "Update equipment address",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        }
+      },
+      "zeroconf_confirm": {
+        "title": "Connect {name}",
+        "description": "Add live, read-only workout metrics from {name}?"
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect. Check that the equipment is awake and reachable.",
+      "unsupported_device": "This device does not provide supported FTMS telemetry and a serial number."
+    },
+    "abort": {
+      "already_configured": "This equipment is already configured.",
+      "cannot_connect": "Unable to connect to this equipment.",
+      "unsupported_device": "This equipment does not provide supported FTMS telemetry.",
+      "unique_id_mismatch": "This address belongs to a different device.",
+      "reconfigure_successful": "Equipment address updated."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "speed": {
+        "name": "Speed"
+      },
+      "cadence": {
+        "name": "Cadence"
+      },
+      "power": {
+        "name": "Power"
+      },
+      "distance": {
+        "name": "Distance"
+      },
+      "incline": {
+        "name": "Incline"
+      },
+      "heart_rate": {
+        "name": "Heart rate"
+      },
+      "elapsed_time": {
+        "name": "Elapsed time"
+      },
+      "energy": {
+        "name": "Energy"
+      }
+    }
+  }
+}

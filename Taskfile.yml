@@ -1,0 +1,14 @@
+version: '3'
+tasks:
+  install:
+    cmds: [uv sync --locked]
+  test:
+    cmds: [uv run pytest --cov=custom_components.wahoo_fitness --cov-report=term-missing]
+  check:
+    cmds:
+      - uv run ruff check .
+      - uv run ruff format --check .
+      - uv run ty check custom_components
+      - task: test
+  test:hardware:
+    cmds: [uv run pytest tests/hardware --hardware -v -o junit_family=xunit1 --junitxml=.artifacts/hardware.xml]
