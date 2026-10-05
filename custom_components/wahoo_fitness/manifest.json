@@ -12,7 +12,7 @@
   "requirements": [
     "wftnp==0.1.2"
   ],
-  "version": "0.0.0",
+  "version": "0.1.0",
   "zeroconf": [
     "_wahoo-fitness-tnp._tcp.local."
   ]
